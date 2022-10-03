@@ -21,12 +21,12 @@
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link rel="stylesheet" href="{{url('css/blog.css')}}" >
   </head>
-  <header>
-      @include('partials.header')
-  </header>
-
+  
   <body>
-    
+      
+      <header>
+          @include('partials.header')
+      </header>
     
     
     <main role="main" class="container">
@@ -39,13 +39,13 @@
             <h2 class="blog-post-title mb-4 pb-4  text-dark" style="font: italic" >Movies:</h2>
             <hr><hr>
           </article>
-          <p>@yield('content')</p>
           
           
         </div><!-- /.blog-main -->
-
-      </div><!-- /.row -->
-
+        
+    </div><!-- /.row -->
+    
+    <p>@yield('content')</p>
      
     </main><!-- /.container -->
     
