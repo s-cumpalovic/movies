@@ -36,7 +36,8 @@
           </h3>
           
           <article class="blog-post">
-            <h2 class="blog-post-title mb-4 pb-4  text-primary " style="font: italic" >Movies:</h2>
+            <h2 class="blog-post-title mb-4 pb-4  text-dark" style="font: italic" >Movies:</h2>
+            <hr><hr>
           </article>
           <p>@yield('content')</p>
           

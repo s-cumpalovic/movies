@@ -10,7 +10,7 @@
                 {{$movie->title}}
                 </a>
             </h3>
-            <p>{{$movie->body}}</p>
+            <p>{{$movie->storyline}}</p>
         </div>
     @endforeach
 @endsection
