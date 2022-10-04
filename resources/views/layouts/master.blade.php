@@ -16,22 +16,22 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <link rel="stylesheet" href="{{url('css/blog.css')}}" >
   </head>
   
   <body>
-      
-      <header>
+    
+    <header>
           @include('partials.header')
-      </header>
-    
-    
-    <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-8 blog-main">
+        </header>
+        
+        
+        <main role="main" class="container">
+          <div class="row">
+            <div class="col-md-8 blog-main">
           <h2 class="pb-3 mb-4 font-italic border-bottom">
           </h3>
           
@@ -40,12 +40,12 @@
             <hr><hr>
           </article>
           
+          <p>@yield('content')</p>
           
         </div><!-- /.blog-main -->
         
     </div><!-- /.row -->
     
-    <p>@yield('content')</p>
      
     </main><!-- /.container -->
     
