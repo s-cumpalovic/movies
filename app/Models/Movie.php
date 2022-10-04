@@ -18,6 +18,16 @@ class Movie extends Model
         'year_produced',
         'storyline'
     ];
+
+    public function comments() {
+        return $this->hasMany(Comment::class);
+    }
+    
+    public function addComment($content) {
+        $this->comments()->create([
+            'content' => $content
+        ]);
+    }
 }
 
 $movies = Movie::all();

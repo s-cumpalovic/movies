@@ -12,3 +12,16 @@
     <p class="blog-post-meta">Storyline: {{$movie->storyline}}</p>
     
   </div><!-- /.blog-post -->
+{{-- @dd($movie); --}}
+  <div>
+    <h4 >Comments:</h4>
+
+    <ul>
+      @foreach($movie->comments as $comment)
+        <li>
+          <p>{{$comment->content}}</p> 
+          <p class="font-italic">created: {{$comment->created_at}}</p>
+        </li>
+      @endforeach
+    </ul>
+  </div>
