@@ -16,5 +16,6 @@ use App\Http\Controllers\MovieController;
 
 Route::get('/movies',[MovieController::class, 'index']);
 Route::get('/movies/create',[MovieController::class, 'create']);
+Route::post('/movies', [MovieController::class, 'store']);
 Route::get('/movies/{id}',[MovieController::class, 'show'])->name('single-movie-route');
 

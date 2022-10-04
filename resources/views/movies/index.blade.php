@@ -6,11 +6,13 @@
     @foreach($movies as $movie)
         <div>
             <h3>
-                <a href="{{ route('single-movie-route', ['id' => $movie->id]) }}">
                 {{$movie->title}}
-                </a>
             </h3>
-            <p>{{$movie->storyline}}</p>
+            <p class="p-3 mb-3">{{Str::limit($movie->storyline, 100)}}</p>
+            <a href="{{ route('single-movie-route', ['id' => $movie->id]) }}">
+                read more...
+            </a>
+            <hr><hr>
         </div>
     @endforeach
 @endsection

@@ -1,9 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\CreateMovieRequest;
 use App\Models\Movie;
-use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
@@ -34,9 +33,21 @@ class MovieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreateMovieRequest $request)
     {
-        //
+        $validated = $request->validated();
+
+        Movie::create([
+            'title' => $validated['title'],
+            'genre' => $validated['genre'],
+            'director' => $validated['director'],
+            'year_produced' => $validated['year_produced'],
+            'storyline' => $validated['storyline'],
+
+        ]);
+
+        return redirect('/movies');
+
     }
 
     /**
@@ -69,7 +80,7 @@ class MovieController extends Controller
      * @param  \App\Models\Movie  $movie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Movie $movie)
+    public function update()
     {
         //
     }

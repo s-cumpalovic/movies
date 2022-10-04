@@ -1,10 +1,10 @@
-@extends ('layouts.master');
+@extends ('layouts.master')
 
-@section('title', 'Add a movie');
+@section('title', 'Add a movie')
 
 @section('content')
 
-<form method="POST" action="/movies">
+<form method="POST" action="/movies" class="mt-5 p-5">
 
     @csrf
 
@@ -46,7 +46,7 @@
 
     <div class = "mb-3">
         <label class="form-label" for="">Storyline</label>
-        <textarea name="body" cols="40" rows="15" class = "form-control" placeholder="Storyline...""></textarea>
+        <textarea name="storyline" cols="40" rows="15" class = "form-control" placeholder="Storyline..."></textarea>
     </div>
 
     @error('storyline')
