@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\GenresController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +18,12 @@ use App\Http\Controllers\MovieController;
 
 Route::get('/movies',[MovieController::class, 'index']);
 Route::get('/movies/create',[MovieController::class, 'create']);
-Route::post('/movies', [MovieController::class, 'store']);
 Route::get('/movies/{id}',[MovieController::class, 'show'])->name('single-movie-route');
+Route::post('/movies', [MovieController::class, 'store']);
 
-Route::post('/movies/{id}/comments', [CommentsController::class, 'store']);
+Route::post('/movies/{id}/comments', [CommentController::class, 'store']);
+
+Route::get('/genre/:{genre}', [GenresController::class, 'show'])->name('genre-route');
+
 
 

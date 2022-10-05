@@ -24,8 +24,7 @@ class CreateCommentRequest extends FormRequest
     public function rules()
     {
         return [
-
-            'content' => 'required|min:5|max:20'
+            'content' => 'required|min:5'
         ];
     }
 }
