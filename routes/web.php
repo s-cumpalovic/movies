@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\GenresController;
+use App\Http\Controllers\SidebarsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::post('/movies', [MovieController::class, 'store']);
 Route::post('/movies/{id}/comments', [CommentController::class, 'store']);
 
 Route::get('/genre/:{genre}', [GenresController::class, 'show'])->name('genre-route');
+
+
 
 
 

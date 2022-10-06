@@ -2,6 +2,11 @@
 
 @section('title', 'Best Movies')
 
+
+@include('partials.sidebar')
+
+
+
 @section('content')
     @foreach($movies as $movie)
         <div>
